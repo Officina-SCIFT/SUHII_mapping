@@ -1,0 +1,6 @@
+requests
+geopandas
+osmnx
+networkx
+rasterio
+matplotlib
