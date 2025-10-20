@@ -598,7 +598,7 @@ username = 'chiara.richiardi'
 system('pip install requests pandas')
 
 command = paste0(
-  "python downloader_all_sat_cc.py",
+  "python downloader.py",
   " --token ", token,
   " --username ", username,
   " --bbox ", aoi_bb['x', 'min'], " ", aoi_bb['y', 'min'], 
