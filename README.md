@@ -55,9 +55,20 @@ pip install -r requirements.txt
    - Download, preprocess, and mosaic satellite imagery using the configured parameters.
    - Generate maps and intermediate datasets inside the working directory defined by `percorso`.
 
-## Project Status
-This work underpins a scientific manuscript that is currently under peer review. Updates to the repository may occur as part of the review process.
 
+## Disclaimer
+All data products and derived outputs provided in this repository are based on the associated peer‐reviewed publication. Any use of these data - whether for further analysis, modeling, visualization, or incorporation into other projects - must include a citation to the original paper.
+Please cite the following reference when using any portion of these data:
+
+Richiardi, C., Caroscio, L., Crescini, E., De Marchi, M., De Pieri, G. M., Ceresi, C., Baldo, F., Francobaldi, M., & Pappalardo, S. E. (2025). A global downstream approach to mapping surface urban heat islands using open data and collaborative technology. *Sustainable Geosciences: People, Planet and Prosperity*, 100006. https://doi.org/10.1016/j.susgeo.2025.100006
+
+Failure to cite the original publication may constitute a breach of academic and professional standards.
+
+## Project 
+The project aligns with SDG 17 (Partnerships for the Goals) by fostering open, cross-sectoral collaboration through open science principles. By releasing the workflow under the GNU General Public License v3.0 (GPL 3.0) and providing implementations in both R and Python, the project promotes inclusivity in technical development and downstream use.
+
+In line with the values of transparency, reproducibility, and accessibility, all code, data processing steps, and documentation are openly shared to facilitate collaboration across research institutions, policy sectors, and geographic regions. The repository is intended as a living resource that encourages community contributions, interoperability between tools, and the co-creation of robust environmental analyses supporting evidence-based decision-making.
+  
 ## Acknowledgements
 The development of this workflow was made possible thanks to the collaboration and support of **SCIFT Officina**.
 
