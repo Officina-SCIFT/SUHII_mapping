@@ -778,8 +778,8 @@ rs <- crs(lst.mean, proj=T, describe=T, parse=T)
 # 1) Estrazione delle informazioni di base
 info_raster <- list(
   # Informazioni di identificazione
-  title           = paste("LST media",season,y,citta),
-  description     = paste0("Mappa della Land Surface Temperature media stagionale (°C) generata da dati Landsat per l'",season," dell'anno ", y),
+  title           = paste("LST mean warm season",y,citta),
+  description     = paste0("Mean Land Surface Temperature (°C) of the warm season generated from Landsat data of year ", y),
   keywords        = c("LST", "raster", "satellite"),
   
   # Informazioni tecniche / spaziali
@@ -798,7 +798,7 @@ info_raster <- list(
   author          = "SCIFT",
   license         = "GNU General Public License v3.0 ",
   url             = "https://municipiozero.it/scift/",
-  DOI             = "fake_DOI"
+  DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
 )
 
 # 3) Conversione in JSON e scrittura su file
@@ -933,27 +933,27 @@ if (fasce_altitudinali>1) {
   # 1) Estrazione delle informazioni di base
   info_raster <- list(
     # Informazioni di identificazione
-    title           = paste("Anomalia termica",season,y,citta),
-    description     = paste0("Mappa dell'anomalia termica stagionale (°C) generata da dati Landsat per l'",season," dell'anno ", y),
+    title           = paste("Thermal anomaly",season,y,citta),
+    description     = paste0("Theram anomaly map (°C) generated from Landsat data for the warm season of year ", y),
     keywords        = c("UHI", "raster", "satellite"),
     
     # Informazioni tecniche / spaziali
     #filename        = lst.mean,
     format          = "GeoTIFF",                      # o il formato effettivo
     crs             = paste0(rs$name,", ",rs$authority,":",rs$code),     # restituisce il sistema di riferimento
-    extent          = as.list(ext(anomalia)),         # bounding box (xmin, xmax, ymin, ymax)
-    resolution      = res(anomalia),                  # risoluzione in x e y
-    ncol            = ncol(anomalia),
-    nrow            = nrow(anomalia),
-    nbands          = nlyr(anomalia),                 # numero di layer/bande
-    values_range    = minmax(anomalia),  # min e max
+    extent          = as.list(ext(anomalia_termica)),         # bounding box (xmin, xmax, ymin, ymax)
+    resolution      = res(anomalia_termica),                  # risoluzione in x e y
+    ncol            = ncol(anomalia_termica),
+    nrow            = nrow(anomalia_termica),
+    nbands          = nlyr(anomalia_termica),                 # numero di layer/bande
+    values_range    = minmax(anomalia_termica),  # min e max
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
     author          = "SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
-    DOI             = "fake_DOI"
+    DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
   )
   
   # 3) Conversione in JSON e scrittura su file
@@ -987,8 +987,8 @@ if (fasce_altitudinali>1) {
   # Estrazione delle informazioni di base
   info_raster <- list(
     # Informazioni di identificazione
-    title           = paste("SUHI",season,y,citta),
-    description     = paste0("Mappa della Surface Urban Heat Island (SUHI) stagionale (°C) generata da dati Landsat per l'",season," dell'anno ", y),
+    title           = paste("SUHII",season,y,citta),
+    description     = paste0("Surface Urban Heat Island Intensity (SUHII) map of the warm season of ", y),
     keywords        = c("UHI", "raster", "satellite"),
     
     # Informazioni tecniche / spaziali
@@ -1006,7 +1006,7 @@ if (fasce_altitudinali>1) {
     author          = "SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
-    DOI             = "fake_DOI"
+    DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
   )
   
   # Conversione in JSON e scrittura su file
@@ -1072,8 +1072,8 @@ if (fasce_altitudinali>1) {
   # 1) Estrazione delle informazioni di base
   info_raster <- list(
     # Informazioni di identificazione
-    title           = paste("Anomalia termica",season,y,citta),
-    description     = paste0("Mappa dell'anomalia termica stagionale (°C) generata da dati Landsat per l'",season," dell'anno ", y),
+    title           = paste("Thermal anomaly",season,y,citta),
+    description     = paste0("Theram anomaly map (°C) generated from Landsat data for the warm season of year ", y),
     keywords        = c("UHI", "raster", "satellite"),
     
     # Informazioni tecniche / spaziali
@@ -1092,7 +1092,7 @@ if (fasce_altitudinali>1) {
     author          = "SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
-    DOI             = "fake_DOI"
+    DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
   )
   
   # 3) Conversione in JSON e scrittura su file
@@ -1128,8 +1128,8 @@ if (fasce_altitudinali>1) {
   # Estrazione delle informazioni di base
   info_raster <- list(
     # Informazioni di identificazione
-    title           = paste("SUHI",season,y,citta),
-    description     = paste0("Mappa della Surface Urban Heat Island (SUHI) stagionale (°C) generata da dati Landsat per l'",season," dell'anno ", y),
+    title           = paste("SUHII",season,y,citta),
+    description     = paste0("Surface Urban Heat Island Intensity (SUHII) map of the warm season of ", y),
     keywords        = c("UHI", "raster", "satellite"),
     
     # Informazioni tecniche / spaziali
@@ -1147,12 +1147,12 @@ if (fasce_altitudinali>1) {
     author          = "SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
-    DOI             = "fake_DOI"
+    DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
   )
   
   # Conversione in JSON e scrittura su file
   metadata_json <- toJSON(info_raster, pretty = TRUE)
-  write(metadata_json, file = paste0(output,"/",season,"_",y,"_SUHI_metadata.json"))
+  write(metadata_json, file = paste0(output,"/",season,"_",y,"_SUHII_metadata.json"))
   
   # Visualize SUHII index
   pal3 <- colorNumeric("Spectral", domain = c(0,1),reverse = TRUE)
@@ -1192,3 +1192,34 @@ leaflet() %>%
   addLegend(pal = pal3, values = c(-5,5),
             title = paste("Distanza dalle aree verdi (m)"))
 
+                     ### Genera metadato
+  rs <- crs(distance_raster, proj=T, describe=T, parse=T)
+  
+  # Estrazione delle informazioni di base
+  info_raster <- list(
+    # Informazioni di identificazione
+    title           = paste("Distance from Green urban Areas",y,citta),
+    description     = paste0("Map of the distance from Green Urban Areas - ", y),
+    keywords        = c("UHI", "raster", "satellite"),
+    
+    # Informazioni tecniche / spaziali
+    format          = "GeoTIFF",                  # o il formato effettivo
+    crs             = paste0(rs$name,", ",rs$authority,":",rs$code),     # restituisce il sistema di riferimento
+    extent          = as.list(ext(SUHI)),         # bounding box (xmin, xmax, ymin, ymax)
+    resolution      = res(SUHI),                  # risoluzione in x e y
+    ncol            = ncol(SUHI),
+    nrow            = nrow(SUHI),
+    nbands          = nlyr(SUHI),                 # numero di layer/bande
+    values_range    = minmax(SUHI),               # min e max
+    
+    # Informazioni di autore e data
+    creation_date   = as.character(Sys.Date()),
+    author          = "SCIFT",
+    license         = "GNU General Public License v3.0 ",
+    url             = "https://municipiozero.it/scift/",
+    DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
+  )
+  
+  # Conversione in JSON e scrittura su file
+  metadata_json <- toJSON(info_raster, pretty = TRUE)
+  write(metadata_json, file = paste0(output,"/",season,"_",y,"_GUA_distance_metadata.json"))
