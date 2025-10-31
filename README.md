@@ -40,7 +40,7 @@ pip install -r requirements.txt
    Open `src/R/SUHI_mapping.R` and edit the configuration block near the top of the script:
    - `citta`: name of the city or study area.
    - `percorso`: working directory where data are processed and outputs will be stored.
-   - `season`: `"warm"` or `"inverno"` to select the analysis season.
+   - `season`: up to now only `"warm"` season implemented.  
    - `LD_script`: path to the folder that contains `downloader.py`.
    - `cct`: cloud cover threshold (%) for selecting imagery. The default and recommended is 30%.
 
