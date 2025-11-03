@@ -686,7 +686,7 @@ for (l in lst.list) {
     }
     
     # Apply mask: set only masked pixels to NA
-    ST <- mask(ST, clouds, maskvalues = 1, updatevalue = NA)
+    ST <- mask(ST, QA, maskvalues = NA, updatevalue = NA)
     
     
     # SE LA SCENA E' PER LA MAGGIOR PARTE NON VALIDA (>CCT%) SALTALA
