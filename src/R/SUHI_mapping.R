@@ -247,7 +247,27 @@ setwd(input)
 aoiosm <- tryCatch({
   aoi_bb %>%
     opq() %>%
-    add_osm_feature("admin_level", value = c("6", "7", "8")) %>% 
+    add_osm_feature("admin_level", value = c( "8")) %>% 
+    add_osm_feature("name", value = citta, match_case = FALSE) %>%  
+    osmdata_sf()
+}, error = function(e) {
+  message("Primary OSM query failed: ", e$message)
+  message("Trying alternate OSM query...")
+  # Now try the alternate query
+  tryCatch({
+  aoi_bb %>%
+    opq() %>%
+    add_osm_feature("admin_level", value = c("7")) %>% 
+    add_osm_feature("name", value = citta, match_case = FALSE) %>%  
+    osmdata_sf()
+}, error = function(e) {
+  message("Primary OSM query failed: ", e$message)
+  message("Trying alternate OSM query...")
+  # Now try the alternate query
+    tryCatch({
+  aoi_bb %>%
+    opq() %>%
+    add_osm_feature("admin_level", value = c("6")) %>% 
     add_osm_feature("name", value = citta, match_case = FALSE) %>%  
     osmdata_sf()
 }, error = function(e) {
