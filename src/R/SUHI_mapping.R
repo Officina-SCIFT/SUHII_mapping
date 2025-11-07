@@ -4,16 +4,11 @@
 
 # Script for automating the mapping of surface urban heat islands 
 
-# References: 
-# https://www.youtube.com/watch?v=XfaoRxQQYzg 
-
-# Reference keys and values OSM:
-# https://wiki.openstreetmap.org/wiki/Key:landuse
-# https://wiki.openstreetmap.org/wiki/Category:Key_descriptions
-# https://rspatialdata.github.io/osm.html
-
-# USGS API
-# https://m2m.cr.usgs.gov/api/docs/json/
+# Reference: 
+#Richiardi, C., Caroscio, L., Crescini, E., De Marchi, M., De Pieri, G. M., Ceresi, C., 
+#Baldo, F., Francobaldi, M., & Pappalardo, S. E. (2025). A global downstream approach to 
+#mapping surface urban heat islands using open data and collaborative technology. 
+#Sustainable Geosciences: People, Planet and Prosperity, 100006. https://doi.org/10.1016/j.susgeo.2025.100006
 
 # Contacts: 
 # chiara.richiardi@gmail.com
