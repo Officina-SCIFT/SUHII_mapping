@@ -23,18 +23,20 @@
 #####                              SETUP                                    ####
 ################################################################################
 # WRITE HERE, INSIDE THE QUOTATION MARKS, YOUR CITY OF INTEREST
-citta <- "Limassol"  
+citta <- "Firenze"  
 # WRITE HERE, INSIDE THE QUOTATION MARKS, THE PATH OF THE WORK FOLDER (OF YOUR CHOICE)
 percorso <- "E:/UHI_test"
-# IMPOSTA LA season DI INTERESSE
-season <- "warm" # oppure "inverno"
 # WRITE HERE, INSIDE THE QUOTATION MARKS, THE FOLDER WHERE THE "downloader.py" FILE IS 
 LD_script <- "H:/.shortcut-targets-by-id/1CL6-2-JcQe_EHeMxTKhTwfCNXBRos6cC/Progetto_Climattivismo_Urbano/Script"
-# Cloud cover threshold
-cct <- 30
+
 ################################################################################
 
 #### Section 1 - PRELIMINAR OPERATIONS #########################################
+#0.0 Fixed parameters ----
+# IMPOSTA LA season DI INTERESSE
+season <- "warm" # oppure "inverno"
+# Cloud cover threshold
+cct <- 30
 #1.1 Load packages ----
 list.of.packages <- c(
   "devtools",
@@ -245,44 +247,47 @@ setwd(input)
 #2.1.1 Administrative boundaries ----
 # First try the primary query
 aoiosm <- tryCatch({
+  # Try admin_level 8
   aoi_bb %>%
     opq() %>%
-    add_osm_feature("admin_level", value = c( "8")) %>% 
-    add_osm_feature("name", value = citta, match_case = FALSE) %>%  
+    add_osm_feature("admin_level", value = "8") %>%
+    add_osm_feature("name", value = citta, match_case = FALSE) %>%
     osmdata_sf()
-}, error = function(e) {
-  message("Primary OSM query failed: ", e$message)
-  message("Trying alternate OSM query...")
-  # Now try the alternate query
+}, error = function(e1) {
+  message("admin_level 8 query failed: ", e1$message)
+  message("Trying admin_level 7...")
   tryCatch({
-  aoi_bb %>%
-    opq() %>%
-    add_osm_feature("admin_level", value = c("7")) %>% 
-    add_osm_feature("name", value = citta, match_case = FALSE) %>%  
-    osmdata_sf()
-}, error = function(e) {
-  message("Primary OSM query failed: ", e$message)
-  message("Trying alternate OSM query...")
-  # Now try the alternate query
-    tryCatch({
-  aoi_bb %>%
-    opq() %>%
-    add_osm_feature("admin_level", value = c("6")) %>% 
-    add_osm_feature("name", value = citta, match_case = FALSE) %>%  
-    osmdata_sf()
-}, error = function(e) {
-  message("Primary OSM query failed: ", e$message)
-  message("Trying alternate OSM query...")
-  # Now try the alternate query
-  tryCatch({
+    # Try admin_level 7
     aoi_bb %>%
       opq() %>%
-      add_osm_feature("int_name", value = citta, match_case = FALSE) %>% 
-      add_osm_feature("place", value = "city") %>% 
+      add_osm_feature("admin_level", value = "7") %>%
+      add_osm_feature("name", value = citta, match_case = FALSE) %>%
       osmdata_sf()
   }, error = function(e2) {
-    message("Alternate OSM query failed: ", e2$message)
-    return(NULL)
+    message("admin_level 7 query failed: ", e2$message)
+    message("Trying admin_level 6...")
+    tryCatch({
+      # Try admin_level 6
+      aoi_bb %>%
+        opq() %>%
+        add_osm_feature("admin_level", value = "6") %>%
+        add_osm_feature("name", value = citta, match_case = FALSE) %>%
+        osmdata_sf()
+    }, error = function(e3) {
+      message("admin_level 6 query failed: ", e3$message)
+      message("Trying alternate OSM query...")
+      tryCatch({
+        # Final fallback: int_name + place
+        aoi_bb %>%
+          opq() %>%
+          add_osm_feature("int_name", value = citta, match_case = FALSE) %>%
+          add_osm_feature("place", value = "city") %>%
+          osmdata_sf()
+      }, error = function(e4) {
+        message("All OSM queries failed: ", e4$message)
+        return(NULL)
+      })
+    })
   })
 })
 
@@ -815,7 +820,7 @@ info_raster <- list(
   
   # Informazioni di autore e data
   creation_date   = as.character(Sys.Date()),
-  author          = "SCIFT",
+  author          = "Officina SCIFT",
   license         = "GNU General Public License v3.0 ",
   url             = "https://municipiozero.it/scift/",
   DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
@@ -970,7 +975,7 @@ if (fasce_altitudinali>1) {
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
-    author          = "SCIFT",
+    author          = "Officina SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
     DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
@@ -1023,7 +1028,7 @@ if (fasce_altitudinali>1) {
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
-    author          = "SCIFT",
+    author          = "Officina SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
     DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
@@ -1109,7 +1114,7 @@ if (fasce_altitudinali>1) {
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
-    author          = "SCIFT",
+    author          = "Officina SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
     DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
@@ -1164,7 +1169,7 @@ if (fasce_altitudinali>1) {
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
-    author          = "SCIFT",
+    author          = "Officina SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
     DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
@@ -1234,7 +1239,7 @@ leaflet() %>%
     
     # Informazioni di autore e data
     creation_date   = as.character(Sys.Date()),
-    author          = "SCIFT",
+    author          = "Officina SCIFT",
     license         = "GNU General Public License v3.0 ",
     url             = "https://municipiozero.it/scift/",
     DOI             = "https://doi.org/10.1016/j.susgeo.2025.100006"
