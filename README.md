@@ -60,7 +60,7 @@ pip install -r requirements.txt
 All data products and derived outputs provided in this repository are based on the associated peer‐reviewed publication. Any use of these data - whether for further analysis, modeling, visualization, or incorporation into other projects - must include a citation to the original paper.
 Please cite the following reference when using any portion of these data:
 
-Richiardi, C., Caroscio, L., Crescini, E., De Marchi, M., De Pieri, G. M., Ceresi, C., Baldo, F., Francobaldi, M., & Pappalardo, S. E. (2025). A global downstream approach to mapping surface urban heat islands using open data and collaborative technology. *Sustainable Geosciences: People, Planet and Prosperity*, 100006. https://doi.org/10.1016/j.susgeo.2025.100006
+Richiardi, C., Caroscio, L., Crescini, E., De Marchi, M., De Pieri, G. M., Ceresi, C., Baldo, F., Francobaldi, M., & Pappalardo, S. E. (2025). A global downstream approach to mapping surface urban heat islands using open data and collaborative technology. *Sustainable Geosciences: People, Planet and Prosperity*, 100006. [https://doi.org/10.1016/j.susgeo.2025.100006](https://doi.org/10.1016/j.susgeo.2025.100006).
 
 Failure to cite the original publication may constitute a breach of academic and professional standards.
 
@@ -73,3 +73,10 @@ In line with the values of transparency, reproducibility, and accessibility, all
 The development of this workflow was made possible thanks to the collaboration and support of **SCIFT Officina**.
 
 For questions or contributions, please open an issue or submit a pull request.
+
+# 💬 Share Your Feedback
+We’d love to hear how you’re using the workflow. Your input helps improve the workflow and highlight real-world applications.
+👉 Take a few minutes to fill out our [user feedback form](https://docs.google.com/forms/d/e/1FAIpQLScPsFdDerNaYa_WPHlRN-0qV5SfJcZ4uILIQK0cef_2M6jNOg/viewform?usp=dialog)
+
+If you’d like, you can also share your story about how you used the workflow and the impact of your results.
+Thank you for helping make this project more open, useful, and collaborative! 🌍
