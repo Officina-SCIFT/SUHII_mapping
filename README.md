@@ -67,7 +67,7 @@ Thank you for helping make this project more open, useful, and collaborative! ðŸ
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
   
-# Surface Urban Heat Island Intensity (SUHII) Mapping
+# Mapatura dell'intensitÃ  delle isole di calore urbane superficiali (SUHII)  
 
 (Versione italiana)
 
