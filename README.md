@@ -4,51 +4,33 @@ This repository contains tools for automating the production of surface urban he
 
 ## Prerequisites
 
-### Install R
-1. Download the latest stable release of [R](https://cran.r-project.org/) for your operating system.
-2. Follow the platform-specific installer prompts (Windows `.exe`, macOS `.pkg`, or Linux package manager instructions).
-3. (Optional) Install [RStudio](https://posit.co/download/rstudio-desktop/) for an enhanced development environment.
+### Installation 
+1. Download the latest stable release of [R](https://cran.r-project.org/) for your operating system. Follow the platform-specific installer prompts (Windows `.exe`, macOS `.pkg`, or Linux package manager instructions).
+3. Install [RStudio](https://posit.co/download/rstudio-desktop/) for an enhanced development environment.
+4. Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) (Windows only). If you’re on Windows, install Rtools to enable the compilation of R packages that require source building.
+5. Ensure you have Python v3.x installed. (Windows: Install via the Microsoft Store; macOS / Linux: Use your system package manager or download from [python.org](https://www.python.org/)). Make sure that Python is added to your PATH (environment variables) so it can be accessed from the command line.
 
-### Install Required R Packages
-The script automatically installs any missing CRAN packages on first run. If you prefer to install them manually, you can execute the following in an R console:
-
-```r
-install.packages(c(
-  "devtools", "terra", "tidyterra", "osmdata", "sf", "googledrive",
-  "dplyr", "ggplot2", "lubridate", "sp", "leaflet", "grDevices",
-  "colorRamps", "colorspace", "elevatr", "reticulate", "sfdep",
-  "spdep", "tidyr", "jsonlite", "httr", "purrr", "kgc"
-))
-```
-
-### Python Support (Optional)
-Some steps rely on Python scripts for data download. Install Python 3.9+ and the required packages with:
-
-```bash
-pip install -r requirements.txt
-```
+### Install Required R Packages  
+All required R packages will be installed automatically the first time you run the workflow.
+This process may take several minutes depending on your connection speed — please be patient and allow it to complete.  
 
 ## Using the R Workflow
 
-1. **Clone the repository**
+1. **Download or clone the repository**
    ```bash
    git clone https://github.com/<your-org>/SUHII_mapping.git
    cd SUHII_mapping
    ```
 
 2. **Prepare configuration**
-   Open `src/R/SUHI_mapping.R` and edit the configuration block near the top of the script:
+   Open `src/R/SUHI_mapping.R` with RStudio and edit the configuration block near the top of the script:
    - `citta`: name of the city or study area.
    - `percorso`: working directory where data are processed and outputs will be stored.
-   - `season`: up to now only `"warm"` season implemented.  
    - `LD_script`: path to the folder that contains `downloader.py`.
-   - `cct`: cloud cover threshold (%) for selecting imagery. The default and recommended is 30%.
 
 3. **Run the script**
-   Launch an R session (R GUI, RStudio, or terminal) and source the script:
-   ```r
-   source("src/R/SUHI_mapping.R")
-   ```
+   Select all the script code and launch it (**Run** button).
+   
    The script will:
    - Install and load required packages.
    - Query OpenStreetMap features by dividing the area of interest into manageable chunks.
