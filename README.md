@@ -75,8 +75,8 @@ The development of this workflow was made possible thanks to the collaboration a
 For questions or contributions, please open an issue or submit a pull request.
 
 # 💬 Share Your Feedback
-We’d love to hear how you’re using the workflow. Your input helps improve the workflow and highlight real-world applications.
-👉 Take a few minutes to fill out our [user feedback form](https://docs.google.com/forms/d/e/1FAIpQLScPsFdDerNaYa_WPHlRN-0qV5SfJcZ4uILIQK0cef_2M6jNOg/viewform?usp=dialog)
+We’d love to hear how you’re using the workflow. Your input helps improve the workflow and highlight real-world applications.  
+👉 Take a few minutes to fill out our [user feedback form](https://docs.google.com/forms/d/e/1FAIpQLScPsFdDerNaYa_WPHlRN-0qV5SfJcZ4uILIQK0cef_2M6jNOg/viewform?usp=dialog).
 
 If you’d like, you can also share your story about how you used the workflow and the impact of your results.
 Thank you for helping make this project more open, useful, and collaborative! 🌍
