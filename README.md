@@ -138,6 +138,6 @@ Per domande o contributi, apri una issue o invia una pull request.
 
 Ci piacerebbe sapere come stai utilizzando il workflow! Il tuo contributo aiuta a migliorare gli strumenti e a valorizzare le applicazioni pratiche.
 
-👉 Compila il nostro [modulo di feedback](https://docs.google.com/forms/d/e/1FAIpQLScPsFdDerNaYa_WPHlRN-0qV5SfJcZ4uILIQK0cef_2M6jNOg/viewform?usp=dialog) per condividere la tua esperienza.
+👉 Compila il nostro [modulo di feedback](https://docs.google.com/forms/d/e/1FAIpQLScuYIyojP9iiTP3vjk2wFNVpeEuBwITrGmT-Cp-hU-JH-i7mw/viewform?usp=sf_link) per condividere la tua esperienza.
 
 Se vuoi, puoi anche raccontarci la tua storia d’uso e l’impatto dei tuoi risultati. Grazie per contribuire a rendere questo progetto più aperto, utile e collaborativo! 🌍
