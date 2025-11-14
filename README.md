@@ -4,6 +4,24 @@
 
 This repository contains tools for automating the production of surface urban heat island (SUHII) maps from satellite imagery and OpenStreetMap data. The workflow centres on the `src/R/SUHI_mapping.R` script, which orchestrates preprocessing, spatial analysis, and visualization tasks. Complementary Python utilities (such as `downloader.py`) support data acquisition.
 
+## IMPORTANT: After using the tool, share your feedback and help us grow this project!  
+We would love to hear how you are using the workflow! Your contribution helps us improve the tools and enhance practical applications.  
+We are building SUHII_mapping as an open, useful tool that is truly rooted in the needs of the community.
+That is why we have created a short form: filling it out helps us improve the code, understand how it is used and, above all, give a voice to those who participate.  
+Our goal is to create grassroots practices, a bridge between science and citizenship, where researchers, professionals, students, administrators and curious minds can contribute together to the public good.
+At the same time, we are also developing a web platform to facilitate connections between users, offer more accessible tools and create a space for ongoing discussion.  
+  
+Filling out the form means:  
+🛠️ telling us what works and what we can improve  
+🌍 contributing to an open and participatory process of knowledge  
+💬 helping us shape the space for dialogue we are creating  
+
+If you want to contribute to the project — with code, ideas, feedback or collaborations — you are welcome!
+
+👉 Fill out the [feedback form](https://docs.google.com/forms/d/e/1FAIpQLScuYIyojP9iiTP3vjk2wFNVpeEuBwITrGmT-Cp-hU-JH-i7mw/viewform?usp=sf_link) to share your experience. Your ideas matter!  
+
+If you wish, you can also tell us your user story and the impact of your results. Thank you for contributing.
+
 ## Prerequisites
 
 ### Installation 
@@ -80,6 +98,25 @@ Questa repository contiene strumenti per automatizzare la produzione di mappe de
 Il flusso di lavoro è centrato sullo script src/R/SUHI_mapping.R, che gestisce le operazioni di pre-processing, analisi spaziale e visualizzazione.
 Utilità complementari in Python (come downloader.py) supportano l’acquisizione dei dati.
 
+# IMPORTANTE: Condividi il tuo feedback e aiutaci a far crescere questo progetto!  
+
+Ci piacerebbe sapere come stai utilizzando il workflow! Il tuo contributo aiuta a migliorare gli strumenti e a valorizzare le applicazioni pratiche.  
+Stiamo costruendo SUHII_mapping come uno strumento aperto, utile e realmente radicato nelle esigenze della comunità.  
+Per questo abbiamo creato un breve form: compilarlo ci aiuta a migliorare il codice, a capire come viene utilizzato e, soprattutto, a dare voce a chi partecipa.  
+Il nostro obiettivo è creare pratiche dal basso, un ponte tra scienza e cittadinanza, dove ricercatori, professionisti, studenti, amministratori e curiosi possano contribuire insieme al bene pubblico.  
+In parallelo stiamo anche sviluppando una piattaforma web per facilitare la connessione tra utenti, offrire strumenti più accessibili e creare uno spazio di confronto continuo.
+
+Compilare il form significa:
+🛠️ indicarci cosa funziona e cosa possiamo migliorare
+🌍 contribuire a un processo aperto e partecipato di conoscenza
+💬 aiutarci a modellare lo spazio di dialogo che stiamo creando
+
+Se vuoi contribuire al progetto - con codice, idee, feedback o collaborazioni — sei benvenutə!
+
+👉 Compila il [modulo di feedback](https://docs.google.com/forms/d/e/1FAIpQLScuYIyojP9iiTP3vjk2wFNVpeEuBwITrGmT-Cp-hU-JH-i7mw/viewform?usp=sf_link) per condividere la tua esperienza. Le tue idee contano!
+
+Se vuoi, puoi anche raccontarci la tua storia d’uso e l’impatto dei tuoi risultati. Grazie per contribuire a rendere questo progetto più aperto, utile e collaborativo! 🌍
+
 ## Prerequisiti    
 
 ### Installazione   
@@ -136,13 +173,14 @@ La repository è concepita come una risorsa “viva”, che incoraggia i contrib
 
 ## Ringraziamenti
 
-Lo sviluppo di questo workflow è stato reso possibile grazie alla collaborazione e al supporto di **SCIFT Officina**.
-Per domande o contributi, apri una issue o invia una pull request.
+Lo sviluppo di questo workflow è stato reso possibile grazie alla collaborazione e al supporto di **SCIFT Officina**.  
+Per domande o contributi, apri una issue, invia una pull request o contattaci via mail.  
 
-# 💬 Condividi il tuo feedback
+# 💬 Non dimenticare di condividere il tuo feedback!
+Ci piacerebbe sapere come utilizzi il flusso di lavoro. Il tuo contributo ci aiuta a migliorarlo e a metterne in evidenza le applicazioni nel mondo reale.  
+  <
+👉 Dedica qualche minuto alla compilazione del nostro [modulo di feedback utente](https://docs.google.com/forms/d/e/1FAIpQLScPsFdDerNaYa_WPHlRN-0qV5SfJcZ4uILIQK0cef_2M6jNOg/viewform?usp=dialog).
 
-Ci piacerebbe sapere come stai utilizzando il workflow! Il tuo contributo aiuta a migliorare gli strumenti e a valorizzare le applicazioni pratiche.
-
-👉 Compila il nostro [modulo di feedback](https://docs.google.com/forms/d/e/1FAIpQLScuYIyojP9iiTP3vjk2wFNVpeEuBwITrGmT-Cp-hU-JH-i7mw/viewform?usp=sf_link) per condividere la tua esperienza.
-
-Se vuoi, puoi anche raccontarci la tua storia d’uso e l’impatto dei tuoi risultati. Grazie per contribuire a rendere questo progetto più aperto, utile e collaborativo! 🌍
+Se lo desideri, puoi anche condividere la tua esperienza sull'utilizzo del flusso di lavoro e sull'impatto dei risultati ottenuti.
+Grazie per il tuo contributo nel rendere questo progetto più aperto, utile e collaborativo! 🌍
+    
