@@ -90,7 +90,7 @@ Thank you for helping make this project more open, useful, and collaborative! �
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
   
-# Mapatura dell'intensità delle isole di calore urbane superficiali (SUHII)  
+# Mappatura dell'intensità delle isole di calore urbane superficiali (SUHII)  
 
 (Versione italiana)
 
