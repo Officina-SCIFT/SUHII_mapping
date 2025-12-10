@@ -38,7 +38,7 @@ This process may take several minutes depending on your connection speed — ple
 
 1. **Download or clone the repository**
    ```bash
-   git clone https://github.com/<your-org>/SUHII_mapping.git
+   git clone https://github.com/Officina-SCIFT/SUHII_mapping.git
    cd SUHII_mapping
    ```
 
@@ -134,7 +134,7 @@ Il processo può richiedere alcuni minuti a seconda della velocità della connes
   
 1. **Clona o scarica la repository**
    ```bash
-   git clone https://github.com/<your-org>/SUHII_mapping.git
+   git clone https://github.com/Officina-SCIFT/SUHII_mapping.git
    cd SUHII_mapping
    ```
      
