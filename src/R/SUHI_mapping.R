@@ -613,8 +613,8 @@ setup_python()
 
 # Download thermal band (B6 if L <= 7, B10 if L8 or 9), MTL and QA_PIXEL 
 setwd(LD_script)
-token = 'IhL7fWN!6B_LEXNBl6G6O0tHjbbRQaKJgMukbcEmkjndacC0O39f7@pG0hfLlE2f'
-username = 'chiara.richiardi'
+token = 'put-your-token-here'
+username = 'your-username'
 system('pip install requests pandas')
 
 command = paste0(
@@ -644,7 +644,7 @@ aoisf <- aoi %>% project(lake) %>% tidyterra::as_sf()
 #latitude <- mean(st_coordinates(aoisf)[,2])
 #zoom_level = 11 #round(log2((cos(latitude * pi/180) * 2 * pi * 6378137) / (30 * 256)),0) -1 
 
-elevatr::set_opentopo_key("e86536257246d55c5683c82f441bfc71")
+elevatr::set_opentopo_key("your-opentopo-key")
 dem <- get_elev_raster(locations = aoisf, #z = zoom_level, 
                        src = "gl1",
                        #src = c("aws", "gl3", "gl1", "alos", "srtm15plus"), 
