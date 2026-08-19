@@ -1,3 +1,7 @@
+# **DEPRECATED --> go to https://github.com/Officina-SCIFT/SUHII_mapping_tool**
+
+
+
 # Surface Urban Heat Island Intensity (SUHII) Mapping
 
 `🇮🇹 Versione italiana sotto (Italian version below)`
